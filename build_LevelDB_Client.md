@@ -18,7 +18,7 @@ sudo make install
 ```
 simpleleveldb --address=localhost --port=8888 --db-file=test
 ```
-* open new terminal tab
+### open new terminal tab
 
 insert (A,Airplane)
 ```
