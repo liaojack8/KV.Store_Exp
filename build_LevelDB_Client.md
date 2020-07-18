@@ -20,9 +20,30 @@ simpleleveldb --address=localhost --port=8888 --db-file=test
 ```
 * open new terminal tab
 ```
-curl 'http://localhost:8888/put?key=name&value=Niko'
+curl 'http://localhost:8888/put?key=A&value=Airplane'
 ```
 ```
 Output:
         { "status_txt": "OK", "status_code": 200, "data": "" }
+```
+```
+curl 'http://localhost:8888/get?key=A'
+```
+```
+Output:
+        { "data": "Airplane", "status_txt": "OK", "status_code": 200 }
+```
+```
+curl 'http://localhost:8888/del?key=A'
+```
+```
+Output:
+        { "status_txt": "OK", "status_code": 200, "data": "" }
+```
+```
+curl 'http://localhost:8888/get?key=A'
+```
+```
+Output:
+        { "status_txt": "NOT_FOUND", "status_code": 404, "data": "" }
 ```
