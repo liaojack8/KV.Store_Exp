@@ -3,7 +3,7 @@
 ```
 git clone --recurse-submodules https://github.com/google/leveldb.git
 ```
-## Install Cmake
+## Install CMake
 You should avoid using `apt install cmake`, because of the version you install may be lower than the limit by leveldb.
 
 So, let's install released latest on cmake [website](https://cmake.org/), or you can download the source and compiled by yourself.
