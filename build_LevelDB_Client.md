@@ -19,6 +19,7 @@ sudo make install
 simpleleveldb --address=localhost --port=8888 --db-file=test
 ```
 * open new terminal tab
+
 insert (A,Airplane)
 ```
 curl 'http://localhost:8888/put?key=A&value=Airplane'
