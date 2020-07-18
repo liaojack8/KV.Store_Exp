@@ -1,5 +1,5 @@
 # Build LevelDB Client
-### LevelDB doesn't have any client server, so we need to use simplehttp-simpleleveldb to build restful api to operate LevelDB.
+LevelDB doesn't have any client server, so we need to use simplehttp-simpleleveldb to build restful api to operate LevelDB.
 ## Build Client
 ```
 sudo apt install libjson-c-dev libsnappy-dev
