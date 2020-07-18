@@ -45,11 +45,15 @@ Output:
 mv cmake-3.18.0-Linux-x86_64 /usr/cmake-3.18.0
 ln -sf /usr/cmake-3.18.0/bin/*  /usr/bin/
 ```
-* check the version by `cmake --version`
+* check the version
 ```
-cmake version 3.18.0
+cmake --version
+```
+```
+Output:
+        cmake version 3.18.0
 
-CMake suite maintained and supported by Kitware (kitware.com/cmake).
+        CMake suite maintained and supported by Kitware (kitware.com/cmake).
 ```
 ## Compile LevelDB
 Just follow the step by [here](https://github.com/google/leveldb#building)
