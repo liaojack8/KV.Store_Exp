@@ -19,6 +19,7 @@ sudo make install
 simpleleveldb --address=localhost --port=8888 --db-file=test
 ```
 * open new terminal tab
+insert (A,Airplane)
 ```
 curl 'http://localhost:8888/put?key=A&value=Airplane'
 ```
@@ -26,6 +27,7 @@ curl 'http://localhost:8888/put?key=A&value=Airplane'
 Output:
         { "status_txt": "OK", "status_code": 200, "data": "" }
 ```
+query key:A
 ```
 curl 'http://localhost:8888/get?key=A'
 ```
@@ -33,6 +35,7 @@ curl 'http://localhost:8888/get?key=A'
 Output:
         { "data": "Airplane", "status_txt": "OK", "status_code": 200 }
 ```
+delete key:A
 ```
 curl 'http://localhost:8888/del?key=A'
 ```
@@ -40,6 +43,7 @@ curl 'http://localhost:8888/del?key=A'
 Output:
         { "status_txt": "OK", "status_code": 200, "data": "" }
 ```
+query key:A
 ```
 curl 'http://localhost:8888/get?key=A'
 ```
