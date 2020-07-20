@@ -3,7 +3,7 @@ LevelDB doesn't have any client server, so we need to use [simplehttp-simpleleve
 
 The repository used below was forked by myself, and I was did something modify to let it work normolly.
 
-If you want to try simpler client server tools, this also is my repository, Use Python to complete this client.
+If you want to try simpler client server tools, this also is my repository, I complete this client with Python.
 To build it, just two line of command, go [my repository](https://github.com/liaojack8/LevelDB-httpServer) to know details. (But it worked slowly than simpleleveldb)
 ## Build Client
 ```
