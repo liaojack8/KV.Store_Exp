@@ -1,5 +1,10 @@
 # Build LevelDB Client
-LevelDB doesn't have any client server, so we need to use simplehttp-simpleleveldb to build restful api to operate LevelDB.
+LevelDB doesn't have any client server, so we need to use [simplehttp-simpleleveldb](https://github.com/liaojack8/simplehttp/tree/master/simpleleveldb)to build restful api to operate LevelDB.
+
+The repository used below was forked by myself, and I was did something modify to let it work normolly.
+
+If you want to try simpler client server tools, this also is my repository, Use Python to complete this client.
+To build it, just two line of command, go [my repository](https://github.com/liaojack8/LevelDB-httpServer) to know details. (But it worked slowly than simpleleveldb)
 ## Build Client
 ```
 sudo apt install libjson-c-dev libsnappy-dev
