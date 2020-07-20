@@ -1,5 +1,5 @@
 # Build LevelDB Client
-LevelDB doesn't have any client server, so we need to use [simplehttp-simpleleveldb](https://github.com/liaojack8/simplehttp/tree/master/simpleleveldb)to build restful api to operate LevelDB.
+LevelDB doesn't have any client server, so we need to use [simplehttp-simpleleveldb](https://github.com/liaojack8/simplehttp/tree/master/simpleleveldb) to build restful api to operate LevelDB.
 
 The repository used below was forked by myself, and I was did something modify to let it work normolly.
 
