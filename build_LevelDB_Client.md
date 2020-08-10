@@ -7,21 +7,22 @@ If you want to try simpler client server tools, this also is my repository, I co
 To build it, just two line of command, go [my repository](https://github.com/liaojack8/LevelDB-httpServer) to know details. (But it worked slowly than simpleleveldb)
 ## Build Client
 ```
-sudo apt install libjson-c-dev libsnappy-dev
+sudo apt install libjson-c-dev libsnappy-dev libevent-dev
 wget https://github.com/downloads/libevent/libevent/libevent-1.4.14b-stable.tar.gz
 tar vxf libevent-1.4.14b-stable.tar.gz && cd libevent-1.4.14b-stable
-./configure && make
+./configure
+make && make install 
 sudo ln -s /usr/local/lib/libevent-1.4.so.2 /usr/lib/libevent-1.4.so.2
-git clone https://github.com/liaojack8/simplehttp.git && cd simplehttp/simplehttp
+cd .. && git clone https://github.com/liaojack8/simplehttp.git && cd simplehttp/simplehttp
 make
 sudo make install
-cd ../impleleveldb
+cd ../simpleleveldb
 env LIBLEVELDB=/usr/local make
 sudo make install
 ```
 ## Run Client & Test
 ```
-simpleleveldb --address=localhost --port=8888 --db-file=test
+simpleleveldb --address=localhost --port=8080 --db-file=test
 ```
 ### open new terminal tab
 
