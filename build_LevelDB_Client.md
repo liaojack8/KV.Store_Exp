@@ -28,7 +28,7 @@ simpleleveldb --address=localhost --port=8080 --db-file=test
 
 insert (A,Airplane)
 ```
-curl 'http://localhost:8888/put?key=A&value=Airplane'
+curl 'http://localhost:8080/put?key=A&value=Airplane'
 ```
 ```
 Output:
@@ -36,7 +36,7 @@ Output:
 ```
 query key:A
 ```
-curl 'http://localhost:8888/get?key=A'
+curl 'http://localhost:8080/get?key=A'
 ```
 ```
 Output:
@@ -44,7 +44,7 @@ Output:
 ```
 delete key:A
 ```
-curl 'http://localhost:8888/del?key=A'
+curl 'http://localhost:8080/del?key=A'
 ```
 ```
 Output:
@@ -52,7 +52,7 @@ Output:
 ```
 query key:A
 ```
-curl 'http://localhost:8888/get?key=A'
+curl 'http://localhost:8080/get?key=A'
 ```
 ```
 Output:

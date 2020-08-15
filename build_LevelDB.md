@@ -94,7 +94,7 @@ int main() {
   leveldb::Status s = db->Put(leveldb::WriteOptions(), key, value);
   
   if (s.ok()) s = db->Get(leveldb::ReadOptions(), key, &get);
-  if (s.ok()) cout << "Read in DB (k,v) = (" << key << "," << get << ")" << endl;
+  if (s.ok()) cout << "Read in LevelDB (k,v) = (" << key << "," << get << ")" << endl;
   else cout << "Read Failed!" << endl;
  
   delete db;
@@ -104,9 +104,9 @@ int main() {
 ```
 ### Then compile the test program and run it
 ```
-g++ -o test test.cpp -pthread -lleveldb -std=c++11 && ./test
+g++ -o leveldbtest leveldbtest.cpp -pthread -lleveldb -std=c++11 && ./leveldbtest
 ```
 ```
 Output:
-        Read in DB (k,v) = (A,Airplane)
+        Read in LevelDB (k,v) = (A,Airplane)
 ```
