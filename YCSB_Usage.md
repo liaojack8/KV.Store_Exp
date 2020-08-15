@@ -21,10 +21,19 @@ Output:
 ```
 
 ## Run Benchmark
+* Run benchmark on LevelDB
 
-```bash
-#load the data
-$ ./bin/ycsb.sh load leveldb -s -P workloads/workloada
-#run the workload
-$./bin/ycsb.sh run leveldb -s -P workloads/workloada
-```
+	```bash
+	#load the data
+	$ ./bin/ycsb.sh load leveldb -s -P workloads/workloada
+	#run the workload
+	$./bin/ycsb.sh run leveldb -s -P workloads/workloada
+	```
+* Run benchmark on RocksDB
+
+	```bash
+	#load the data
+	$ ./bin/ycsb load rocksdb -s -P workloads/workloada  -p rocksdb.dir=/tmp/ycsb-rocksdb-data
+	#run the workload
+	$./bin/ycsb run rocksdb -s -P workloads/workloada  -p rocksdb.dir=/tmp/ycsb-rocksdb-data
+	```

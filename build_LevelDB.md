@@ -1,7 +1,7 @@
-# Build LevelDB
+# LevelDB Installation
 ## Clone LevelDB [backup_v1.22](/src/leveldb-google-1.22.zip)
 ```
-git clone --recurse-submodules https://github.com/google/leveldb.git
+$ git clone --recurse-submodules https://github.com/google/leveldb.git
 ```
 ## Install CMake
 You should **avoid** using `apt install cmake`, because of the version you install may be lower than the limit by leveldb.
@@ -11,14 +11,14 @@ So, let's install released latest on cmake [website](https://cmake.org/), or you
 * Go to [https://cmake.org/files/LatestRelease/](https://cmake.org/files/LatestRelease/), and select the file corresponding to the OS you're using.
 
 ```
-wget https://cmake.org/files/LatestRelease/cmake-3.18.0-Linux-x86_64.tar.gz
-tar zxvf cmake-3.18.0-Linux-x86_64.tar.gz
+$ wget https://cmake.org/files/LatestRelease/cmake-3.18.0-Linux-x86_64.tar.gz
+$ tar zxvf cmake-3.18.0-Linux-x86_64.tar.gz
 ```
 
 * Check the file you just get.
 
 ```
-tree -L 2 cmake-3.18.0-Linux-x86_64
+$ tree -L 2 cmake-3.18.0-Linux-x86_64
 ```
 ```
 Output:
@@ -45,15 +45,15 @@ Output:
             └── vim
 ```
 * Create Symbolic Links
-```
-sudo mv cmake-3.18.0-Linux-x86_64 /usr/cmake-3.18.0
-sudo ln -sf /usr/cmake-3.18.0/bin/*  /usr/bin/
+```bash
+$ sudo mv cmake-3.18.0-Linux-x86_64 /usr/cmake-3.18.0
+$ sudo ln -sf /usr/cmake-3.18.0/bin/*  /usr/bin/
 ```
 * check the version
+```bash
+$ cmake --version
 ```
-cmake --version
-```
-```
+```bash
 Output:
         cmake version 3.18.0
 
@@ -61,16 +61,16 @@ Output:
 ```
 ## Compile LevelDB
 Just follow the step by [here](https://github.com/google/leveldb#building)
-```
-mkdir -p build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
+```bash
+$ mkdir -p build && cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
 ```
 You'll get static library named `libleveldb.a`, you should install it to system.
 
-```
-cd ..
-sudo cp build/libleveldb.a /usr/local/lib/
-sudo cp -r include/leveldb /usr/local/include/
+```bash
+$ cd ..
+$ sudo cp build/libleveldb.a /usr/local/lib/
+$ sudo cp -r include/leveldb /usr/local/include/
 ```
 ## Test program
 ### example code:
@@ -103,10 +103,10 @@ int main() {
 }
 ```
 ### Then compile the test program and run it
+```bash
+$ g++ -o leveldbtest leveldbtest.cpp -pthread -lleveldb -std=c++11 && ./leveldbtest
 ```
-g++ -o leveldbtest leveldbtest.cpp -pthread -lleveldb -std=c++11 && ./leveldbtest
-```
-```
+```bash
 Output:
         Read in LevelDB (k,v) = (A,Airplane)
 ```
