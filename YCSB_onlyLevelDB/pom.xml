@@ -74,7 +74,6 @@ LICENSE file.
     <!-- our internals -->
     <module>core</module>
     <!-- all the datastore bindings, lex sorted please -->
-    <module>jdbc</module>
     <module>mongodb</module>
     <!--<module>voldemort</module>-->
   </modules>
